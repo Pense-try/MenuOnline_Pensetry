@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Menu Online - Pense.try</title>
+    <link rel="shortcut icon" href="./src/IMG/IconePenseTry.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./src/CSS/tailwind.css">
+    <link rel="stylesheet" href="./src/CSS/style.css">
+    <link rel="stylesheet" href="./src/CSS/variables.css">
 </head>
+
 <body>
-    
+
+    <section class="home text-white">
+        <div class="home-content">
+            <div class="logo">
+                <img src="./src/IMG/logoPenseTry.png" alt="">
+            </div>
+            <div class="text">
+                <h1 class="font-bold text-5xl/[1.1] pb-[20px]  md:text-7xl/[1.2] md:pb-[30px] ">Menu Online Pense.Try</h1>
+                <p class="font-light text-xl md:text-3xl">Experimente os sabores mais incríveis da cidade!</p>
+                <div>
+                    <a class="btn-primary" href="#menu-categorias">Faça seu pedido <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="btn-primary" href="#about">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="busca-container">
+        <input type="text" id="busca" placeholder="Buscar pratos..." onkeyup="filtrarPratos()">
+        <div class="filtros-container" id="filtros-container">
+            <button class="btn-filtro active" onclick="filtrarPorCategoria('todos')">Todos</button>
+        </div>
+    </div>
+
+    <div class="display-view-container">
+        <h1>Escolha o modo de visualização</h1>
+
+        <div class="view-toggle" onclick="toggleViewMode()">
+            <span id="viewModeText">Carrossel</span>
+            <i>🔄</i>
+        </div>
+    </div>
+
+    <section class="menu">
+        <div id="menu-categorias"></div>
+    </section>
+
+    <div class="carrinho-toggle" onclick="toggleCarrinho()">🛒</div>
+
+    <div class="carrinho">
+        <span class="fechar-carrinho" onclick="toggleCarrinho()">×</span>
+        <h2>Carrinho</h2>
+        <div id="carrinho-itens"></div>
+        <!-- Adicione esta div -->
+        <div class="carrinho-total">
+            Total: <span id="carrinho-total">R$ 0,00</span>
+        </div>
+        <button class="btn-pedido" onclick="fazerPedido()">Fazer Pedido</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                Restaurante Delícia
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+
+            <div class="footer-info">
+                <p>Rua Gastronomia, 123 - Centro</p>
+                <p>Telefone: (43) 99614-5479</p>
+                <p>Funcionamento: Terça a Domingo, 11h às 23h</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2024 Restaurante Delícia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <div class="notificacao" id="notificacao">Item Adicionado!</div>
+
+
+    <script type="module" src="./src/JS/init.js"></script>
 </body>
+
 </html>

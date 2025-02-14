@@ -12,13 +12,9 @@ Esse projeto busca garantir flexibilidade e escalabilidade, permitindo que difer
 
 ## Estrutura do Projeto
 
-- Front-end: (HTML, CSS, JavaScript, Tailwind css,)
-- Back-end: ( JavaScript, Node.js)
-- Banco de Dados: ( MongoDB)
-- Biblioteca de Ferramentas: (NPM)
-- Blibliotecas de dependências: (Express.js)
-- Blibiotecas design: (Swiper.js, Vanilla-tilt.js)
-- API: (Node.js)
+O projeto será desenvolvido com uma estrutura modularizada, permitindo fácil escalabilidade e manutenção. Como se trata de um modelo base que sofrerá diversas alterações conforme as necessidades de cada cliente, a modularização facilitará a adaptação sem comprometer a integridade do código principal.
+
+Cada funcionalidade será organizada em módulos independentes, garantindo que novos recursos possam ser adicionados ou removidos sem impacto significativo no restante do sistema. Além disso, todas as funções e variáveis serão nomeadas em inglês, seguindo um padrão direto e objetivo para manter a consistência e facilitar a colaboração entre desenvolvedores.
 
 
 ## Quem vai codar
@@ -43,16 +39,21 @@ Esse projeto busca garantir flexibilidade e escalabilidade, permitindo que difer
 
 ## Tecnologias Utilizadas
 
-- Linguagem de programação: (Exemplo: JavaScript, Python, PHP)
-- Frameworks/Bibliotecas: (Exemplo: React, Vue.js, Express.js, Laravel)
-- Banco de dados: (Exemplo: MySQL, PostgreSQL, Firebase)
-- Outros: (Exemplo: Docker, APIs externas, ferramentas de autenticação, etc.)
+- Front-end: (HTML, CSS, JavaScript, Tailwind css,)
+- Back-end: ( JavaScript, Node.js)
+- Banco de Dados: ( MongoDB)
+- Biblioteca de Ferramentas: (NPM)
+- Blibliotecas de dependências: (Express.js)
+- Blibiotecas design: (Swiper.js, Vanilla-tilt.js)
+- API: (Node.js)
 
 ## Como Executar o Projeto
 
 Ter o Node.js instalado, execute o comando "npm install" para instalar as dependências do projeto. Em seguida, execute o comando "npm run dev" para iniciar o desenvolvimento local do projeto.
 
 ## Licença
+
+Este projeto está licenciado sob a licença MIT.
 
 ## Contato  
 
