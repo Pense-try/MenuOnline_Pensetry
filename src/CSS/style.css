@@ -1,4 +1,3 @@
-
 body {
     font-family: var(--font-family-sans);
     -webkit-text-size-adjust: 100%;
@@ -9,6 +8,7 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?q=80&w=2089&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,16 +23,29 @@ body {
     justify-content: center;
 }
 
+.logo img {
+    width: 200px;
+    animation: slideIn 2s ease-out 0.4s both;
+}
+
 .home h1 {
     display: flex;
-    animation: slideInTitle 1.2s ease-out 0.3s both;
+    animation: slideIn 2s ease-out 0.6s both;
 }
 
 .home p {
-    animation: slideInTitle 1.2s ease-out 0.6s both;
+    animation: slideIn 2s ease-out 1s both;
 }
 
-@media only screen and (max-width: 769px) { 
+.home .btn-primary:nth-child(1) {
+    animation: slideIn 2s ease-out 1.4s both;
+}
+
+.home .btn-primary:nth-child(2) {
+    animation: slideIn 2s ease-out 1.6s both;
+}
+
+@media only screen and (max-width: 769px) {
     .home-content {
         flex-direction: column;
         margin-bottom: 2rem;
@@ -40,5 +53,278 @@ body {
 
     .logo img {
         width: 150px;
+    }
+}
+
+/* CARRINHO DE COMPRAS CONTAINER */
+
+.carrinho {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s;
+    overflow-y: auto;
+}
+
+.carrinho.ativo {
+    right: 0;
+}
+
+.carrinho-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.carrinho-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.quantidade-controle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantidade-controle button {
+    padding: 5px 10px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.btn-pedido {
+    background: #ae2727;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carrinho-toggle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--color-one);
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carrinho-toggle i {
+    font-size: 1.2rem;
+}
+
+.carrinho-total {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.carrinho-total span {
+    color: #27ae60;
+    font-size: 1.2em;
+}
+
+/* MENU CONTAINER */
+
+.menu {
+    padding: 50px 20px;
+    background: #f5f5f5;
+}
+
+.pratos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 10px 0 25px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.prato {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px;
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    margin-right: 10px;
+}
+
+.prato:hover {
+    transform: translateY(-5px);
+}
+
+.prato img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.prato-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.prato-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.prato-info p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.prato-info p:last-of-type {
+    margin-bottom: 15px;
+}
+
+.btn-adicionar {
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+}
+
+.pratos-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.pratos-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.pratos-container::-webkit-scrollbar-thumb {
+    background: #27ae60;
+    border-radius: 10px;
+}
+
+.setas-controle {
+    display: none;
+}
+
+/* BUSCA CONTAINER */
+
+.busca-container {
+    max-width: 1200px;
+    margin: -30px auto 50px;
+    padding: 0 20px;
+}
+
+#busca {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-titulo {
+    text-align: center;
+    margin: 50px 0 30px;
+    color: #333;
+    font-size: 2em;
+}
+
+.categoria-container {
+    margin-bottom: 60px;
+}
+
+/* FILTROS CONTAINER */ 
+
+.filtros-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-filtro {
+    min-width: 100px;
+    background: #f0f0f0;
+    border: 2px solid #ddd;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9em;
+    text-align: center;
+    color: #444;
+}
+
+.btn-filtro.active {
+    background: #27ae60;
+    color: white;
+    border-color: #27ae60;
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(39, 174, 96, 0.3);
+}
+
+.visible {
+    animation: slideIn 1s ease both;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 50px 0px 50px 10px;
+    }
+
+    .filtros-container {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .btn-filtro {
+        padding: 10px 12px;
+        font-size: 0.85em;
     }
 }

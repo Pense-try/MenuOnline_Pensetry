@@ -16,7 +16,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./src/CSS/tailwind.css">
+    <link rel="stylesheet" href="./src/output.css">
     <link rel="stylesheet" href="./src/CSS/style.css">
     <link rel="stylesheet" href="./src/CSS/variables.css">
 </head>
@@ -29,12 +29,29 @@
                 <img src="./src/IMG/logoPenseTry.png" alt="">
             </div>
             <div class="text">
-                <h1 class="font-bold text-5xl/[1.1] pb-[20px]  md:text-7xl/[1.2] md:pb-[30px] ">Menu Online Pense.Try</h1>
-                <p class="font-light text-xl md:text-3xl">Experimente os sabores mais incríveis da cidade!</p>
-                <div>
-                    <a class="btn-primary" href="#menu-categorias">Faça seu pedido <i class="fa-solid fa-arrow-right"></i></a>
+                <h1 class="title-primary   md:text-7xl/[1.2] md:pb-[30px] md:font-bold ">Menu Online Pense.Try</h1>
+                <p class="font-light text-xl pb-[20px] md:text-3xl">Experimente os sabores mais incríveis da cidade!</p>
+                <div class="flex gap-3 flex-wrap justify-center items-center md:gap-5 ">
                     <a class="btn-primary" href="#about">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="btn-primary" href="#menu-categorias">Faça seu pedido <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-black">
+        <div class="flex flex-col items-center justify-center py-[60px] md:py-[100px] md:text-center" id="about">
+            <h1 class="title-primary pl-[5%] md:pl-0">Seu Cardápio Digital, Sem Complicações</h1>
+            <p class="text-base font-medium px-[5%]  md:text-xl md:pl-0 md:max-w-[90%] ">Simples, rápido e acessível!
+                Nosso menu online facilita a experiência dos seus clientes, permitindo que
+                explorem suas opções com apenas alguns toques. Nada de papel, apenas praticidade.</p>
+
+            <div class="min-w-[90%] flex gap-5 text-3xl pt-[30px] md:pt-[40px] md:gap-5">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                <a href=""><i class="fa-solid fa-globe"></i></a>
             </div>
         </div>
     </section>
@@ -59,7 +76,8 @@
         <div id="menu-categorias"></div>
     </section>
 
-    <div class="carrinho-toggle" onclick="toggleCarrinho()">🛒</div>
+    <div class="carrinho-toggle" onclick="toggleCarrinho()"><i class="fa-solid fa-cart-shopping"
+            style="color: #ffffff;"></i></div>
 
     <div class="carrinho">
         <span class="fechar-carrinho" onclick="toggleCarrinho()">×</span>

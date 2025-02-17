@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
     --font-family-sans: 'Open Sans', sans-serif;
 
@@ -8,27 +7,44 @@
     --color-bg-2: #374151;
     --color-bg-3: #374151;
 
+    --color-one: #8c52ff;
+    --color-two: #f3f4f6;
+    --color-three: #d1d5db;
+
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-125px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @layer components {
     .btn-primary {
-
         border-radius: calc(infinity * 1px);
-        background-color: var(--color-violet-500);
+        background-color: #0000002c;
+        backdrop-filter: blur(10px);
         padding: 1rem 2rem;
         font-weight: 500;
-        color: var(--color-white);
+        border: solid 1px #ffffff25;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             @media (hover: hover) {
-                background-color: var(--color-violet-700);
+                background-color: #0000007a;
             }
         }
     }
 
     .title-primary {
-        font-size: var(--font-size-6xl);
-        font-weight: var(--font-weight-semibold);
-        color: var(--color-white);
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1.1;
+        padding-bottom: 20px;
     }
 }
