@@ -30,18 +30,19 @@ export function initModal() {
     });
 }
 
- export function abrirModal(event) {
-    const pratoId = event.target.dataset.pratoId;
-    const prato = pratos.find(p => p.id === Number(pratoId));
+export function abrirModal(prato) { // Recebe o objeto prato diretamente
+    const modal = document.getElementById('modal-prato');
     
-    document.getElementById('modal-prato').style.display = 'block';
-    document.querySelector('.modal-imagem').src = prato.imagem;
-    document.querySelector('.modal-titulo').textContent = prato.nome;
-    document.querySelector('.modal-ingredientes').textContent = prato.ingredientes;
-    document.querySelector('.modal-tempo').textContent = prato.tempoPreparo;
-    document.querySelector('.modal-serve').textContent = prato.servePessoas;
-    document.querySelector('.modal-descricao').textContent = prato.detalhes;
-    document.querySelector('.modal-preco').textContent = `R$ ${prato.preco.toFixed(2)}`;
+    // Preenche os dados do modal
+    modal.querySelector('.modal-imagem').src = prato.imagem;
+    modal.querySelector('.modal-titulo').textContent = prato.nome;
+    modal.querySelector('.modal-ingredientes').textContent = prato.ingredientes;
+    modal.querySelector('.modal-tempo').textContent = prato.tempoPreparo;
+    modal.querySelector('.modal-serve').textContent = prato.servePessoas;
+    modal.querySelector('.modal-descricao').textContent = prato.detalhes;
+    modal.querySelector('.modal-preco').textContent = `R$ ${prato.preco.toFixed(2)}`;
+    
+    modal.style.display = 'block';
 }
 
 function fecharModal() {

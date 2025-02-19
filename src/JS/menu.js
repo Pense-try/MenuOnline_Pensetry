@@ -41,12 +41,18 @@ function adicionarPratoDOM(prato, container) {
             <h3 class="title-prato">${prato.nome}</h3>
             <p class="text-primary">
                 ${prato.ingredientes}
-                <span class="saiba-mais" data-prato-id="${prato.id}">... saiba mais</span>
+                 <span class="saiba-mais">... saiba mais</span>
             </p>
             <p class="text-price">R$ ${prato.preco.toFixed(2)}</p>
             <button class="btn-adicionar" onclick="adicionarAoCarrinho('${prato.nome}')">Adicionar</button>
         </div>
     `;
+
+     // Adiciona o evento de clique corretamente
+     div.querySelector('.saiba-mais').addEventListener('click', (e) => {
+        e.preventDefault();
+        abrirModal(prato); // Passa o objeto completo do prato
+    });
 
     container.appendChild(div);
 }

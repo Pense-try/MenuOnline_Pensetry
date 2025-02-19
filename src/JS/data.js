@@ -1,50 +1,6 @@
 export const pratos = [
     {
         id: 1,
-        categoria: "Entradas",
-        nome: "Bruschetta",
-        imagem: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f",
-        ingredientes: "Pão italiano, tomate, manjericão, azeite",
-        preco: 18.00,
-        tempoPreparo: "15-20 minutos",
-        servePessoas: "1-2 pessoas",
-        detalhes: "Versão clássica com ingredientes frescos da horta orgânica"
-    },
-    {
-        id: 2,
-        categoria: "Pratos Principais",
-        nome: "Pizza Margherita",
-        imagem: "https://images.unsplash.com/photo-1571066811602-716837d681de",
-        ingredientes: "Molho de tomate, mussarela, manjericão",
-        preco: 45.00,
-        tempoPreparo: "20-25 minutos",
-        servePessoas: "2-3 pessoas",
-        detalhes: "Tradicional receita italiana com ingredientes selecionados"
-    },
-    {
-        id: 3,
-        categoria: "Pratos Principais",
-        nome: "Pizza Calabresa",
-        imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        ingredientes: "Molho de tomate, calabresa, manjericão",
-        preco: 42.00,
-        tempoPreparo: "20-25 minutos",
-        servePessoas: "2-3 pessoas",
-        detalhes: "Calabresa defumada com toque especial de ervas"
-    },
-    {
-        id: 4,
-        categoria: "Pratos Principais",
-        nome: "Up Burger",
-        imagem: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
-        ingredientes: "Pão brioche, carne 200g, queijo cheddar",
-        preco: 32.00,
-        tempoPreparo: "15-20 minutos",
-        servePessoas: "1 pessoa",
-        detalhes: "Hambúrguer artesanal com queijo cheddar cremoso"
-    },
-    {
-        id: 5,
         categoria: "Sobremesas",
         nome: "Cheesecake",
         imagem: "https://images.unsplash.com/photo-1547414368-ac947d00b91d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -55,7 +11,40 @@ export const pratos = [
         detalhes: "Textura suave e sabor equilibrado com frutas frescas"
     },
     {
-        id: 6,
+        id: 2,
+        categoria: "Pratos Principais",
+        nome: "Pizza Calabresa",
+        imagem: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ingredientes: "Molho de tomate, calabresa, manjericão",
+        preco: 42.00,
+        tempoPreparo: "20-25 minutos",
+        servePessoas: "2-3 pessoas",
+        detalhes: "Calabresa defumada com toque especial de ervas"
+    },
+    {
+        id: 3,
+        categoria: "Pratos Principais",
+        nome: "Up Burger",
+        imagem: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+        ingredientes: "Pão brioche, carne 200g, queijo cheddar",
+        preco: 32.00,
+        tempoPreparo: "15-20 minutos",
+        servePessoas: "1 pessoa",
+        detalhes: "Hambúrguer artesanal com queijo cheddar cremoso"
+    },
+    {
+        id: 4,
+        categoria: "Pratos Principais",
+        nome: "Pizza Margherita",
+        imagem: "https://images.unsplash.com/photo-1571066811602-716837d681de",
+        ingredientes: "Molho de tomate, mussarela, manjericão",
+        preco: 45.00,
+        tempoPreparo: "20-25 minutos",
+        servePessoas: "2-3 pessoas",
+        detalhes: "Tradicional receita italiana com ingredientes selecionados"
+    },
+    {
+        id: 5,
         categoria: "Bebidas",
         nome: "Suco Natural Laranja",
         imagem: "https://plus.unsplash.com/premium_photo-1675667390417-d9d23160f4a6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -66,7 +55,7 @@ export const pratos = [
         detalhes: "Refrescante e natural, com um toque de gengibre"
     },
     {
-        id: 7,
+        id: 6,
         categoria: "Entradas",
         nome: "Startup Bruschetta",
         imagem: "https://images.unsplash.com/photo-1664992892797-781fcf7b7541?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -77,7 +66,7 @@ export const pratos = [
         detalhes: "Versão gourmet com queijo burrata cremoso"
     },
     {
-        id: 8,
+        id: 7,
         categoria: "Entradas",
         nome: "Byte Crocante",
         imagem: "https://images.unsplash.com/photo-1562967915-92ae0c320a01?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -88,7 +77,7 @@ export const pratos = [
         detalhes: "Bolinho crocante por fora e cremoso por dentro"
     },
     {
-        id: 9,
+        id: 8,
         categoria: "Entradas",
         nome: "Bruschetta",
         imagem: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f",
@@ -99,7 +88,7 @@ export const pratos = [
         detalhes: "Versão clássica com ingredientes frescos da horta orgânica"
     },
     {
-        id: 10,
+        id: 9,
         categoria: "Entradas",
         nome: "Queijo Coalho Crocante",
         imagem: "https://images.unsplash.com/photo-1562967915-92ae0c320a01",
@@ -110,10 +99,10 @@ export const pratos = [
         detalhes: "Queijo coalho crocante por fora e macio por dentro, servido com mel artesanal"
     },
     {
-        id: 11,
+        id: 10,
         categoria: "Entradas",
         nome: "Carpaccio de Carne",
-        imagem: "https://images.unsplash.com/photo-1609163515879-71e48e461395",
+        imagem: "https://images.unsplash.com/photo-1727243866425-3bf2cbf7480a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Filé mignon, parmesão, rúcula, azeite trufado",
         preco: 34.00,
         tempoPreparo: "10-15 minutos",
@@ -121,10 +110,10 @@ export const pratos = [
         detalhes: "Finas fatias de carne temperadas e servidas com rúcula e lascas de parmesão"
     },
     {
-        id: 12,
+        id: 11,
         categoria: "Pratos Principais",
         nome: "Risoto de Cogumelos",
-        imagem: "https://images.unsplash.com/photo-1625944197828-7a12b505f69e",
+        imagem: "https://plus.unsplash.com/premium_photo-1694850980351-683bd8436024?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Arroz arbóreo, cogumelos frescos, parmesão",
         preco: 42.00,
         tempoPreparo: "25-30 minutos",
@@ -132,10 +121,10 @@ export const pratos = [
         detalhes: "Risoto cremoso feito com cogumelos selecionados e finalizado com parmesão"
     },
     {
-        id: 13,
+        id: 12,
         categoria: "Pratos Principais",
         nome: "Filé ao Molho Gorgonzola",
-        imagem: "https://images.unsplash.com/photo-1606312619349-9cb4b0a83c33",
+        imagem: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Filé mignon, molho gorgonzola, batatas rústicas",
         preco: 58.00,
         tempoPreparo: "30-35 minutos",
@@ -143,10 +132,10 @@ export const pratos = [
         detalhes: "Filé mignon grelhado ao ponto desejado, servido com molho cremoso de gorgonzola e batatas rústicas"
     },
     {
-        id: 14,
+        id: 13,
         categoria: "Pratos Principais",
         nome: "Salmão Grelhado",
-        imagem: "https://images.unsplash.com/photo-1562059390-a761a084768b",
+        imagem: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Salmão, azeite, ervas finas, purê de batata",
         preco: 65.00,
         tempoPreparo: "30 minutos",
@@ -154,10 +143,10 @@ export const pratos = [
         detalhes: "Filé de salmão grelhado servido com purê cremoso e molho de ervas"
     },
     {
-        id: 15,
+        id: 14,
         categoria: "Pratos Principais",
         nome: "Spaghetti ao Pesto",
-        imagem: "https://images.unsplash.com/photo-1576402187874-3a1b6f48f875",
+        imagem: "https://plus.unsplash.com/premium_photo-1661293877589-b03a9e8fe30e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Massa fresca, molho pesto, nozes, parmesão",
         preco: 38.00,
         tempoPreparo: "20 minutos",
@@ -165,10 +154,10 @@ export const pratos = [
         detalhes: "Massa artesanal servida com molho pesto de manjericão e lascas de parmesão"
     },
     {
-        id: 16,
+        id: 15,
         categoria: "Pratos Principais",
         nome: "Frango à Parmegiana",
-        imagem: "https://images.unsplash.com/photo-1624464742259-7c02d08b9b78",
+        imagem: "https://images.unsplash.com/photo-1660297730980-fc6d2fd81ef7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Peito de frango, queijo, molho de tomate, arroz, batatas fritas",
         preco: 45.00,
         tempoPreparo: "30 minutos",
@@ -176,18 +165,7 @@ export const pratos = [
         detalhes: "Frango empanado coberto com queijo derretido e molho de tomate, servido com arroz e batatas"
     },
     {
-        id: 17,
-        categoria: "Sobremesas",
-        nome: "Cheesecake de Frutas Vermelhas",
-        imagem: "https://images.unsplash.com/photo-1606491956689-9e2db122e318",
-        ingredientes: "Cream cheese, frutas vermelhas, base crocante",
-        preco: 24.00,
-        tempoPreparo: "15-20 minutos",
-        servePessoas: "1-2 pessoas",
-        detalhes: "Cheesecake clássico com calda artesanal de frutas vermelhas"
-    },
-    {
-        id: 18,
+        id: 16,
         categoria: "Sobremesas",
         nome: "Petit Gâteau",
         imagem: "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
@@ -198,10 +176,10 @@ export const pratos = [
         detalhes: "Bolinho quente de chocolate com recheio cremoso, acompanhado de sorvete"
     },
     {
-        id: 19,
+        id: 17,
         categoria: "Sobremesas",
         nome: "Tiramisu",
-        imagem: "https://images.unsplash.com/photo-1599458254453-622fc08b02e9",
+        imagem: "https://plus.unsplash.com/premium_photo-1695028378225-97fbe39df62a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Café, mascarpone, biscoito champanhe, cacau",
         preco: 30.00,
         tempoPreparo: "20 minutos",
@@ -209,7 +187,7 @@ export const pratos = [
         detalhes: "Clássica sobremesa italiana com camadas de café e creme mascarpone"
     },
     {
-        id: 20,
+        id: 18,
         categoria: "Bebidas",
         nome: "Mocktail Tropical",
         imagem: "https://images.unsplash.com/photo-1546173159-315724a31696",
@@ -220,10 +198,10 @@ export const pratos = [
         detalhes: "Bebida refrescante com um toque tropical, sem álcool"
     },
     {
-        id: 21,
+        id: 19,
         categoria: "Bebidas",
         nome: "Espresso Tônica",
-        imagem: "https://images.unsplash.com/photo-1584794260141-aca9b53c87fc",
+        imagem: "https://images.unsplash.com/photo-1654682941253-ae8b49c794e6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Café espresso, água tônica, gelo",
         preco: 14.00,
         tempoPreparo: "5 minutos",
@@ -231,10 +209,10 @@ export const pratos = [
         detalhes: "Combinação equilibrada entre o amargor do café e a leveza da água tônica"
     },
     {
-        id: 22,
+        id: 20,
         categoria: "Bebidas",
         nome: "Suco Detox",
-        imagem: "https://images.unsplash.com/photo-1606761568499-b0ecb2e37761",
+        imagem: "https://images.unsplash.com/photo-1571966247529-3bb2cb9d07f8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ingredientes: "Couve, limão, gengibre, maçã",
         preco: 12.00,
         tempoPreparo: "5 minutos",

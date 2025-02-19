@@ -86,7 +86,7 @@
         <div class="carrinho-total">
             Total: <span id="carrinho-total">R$ 0,00</span>
         </div>
-        <button class="btn-pedido" onclick="fazerPedido()">Fazer Pedido</button>
+        <button class="btn-pedido" onclick="finalizarPedido()">Fazer Pedido</button>
     </div>
 
     <footer class="footer">
@@ -118,8 +118,62 @@
     <div class="notificacao" id="notificacao">Item Adicionado!</div>
 
 
+
+
+
+
+<!-- 
+    <div id="modalPedido" class="modal-carrinho">
+        <div class="modal-content-carrinho">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Finalize seu Pedido</h2>
+            <input type="text" id="nome" placeholder="Seu Nome">
+            <input type="text" id="endereco" placeholder="Endereço de Entrega">
+            <select id="pagamento">
+                <option value="dinheiro">Dinheiro</option>
+                <option value="cartao">Cartão</option>
+                <option value="pix">Pix</option>
+            </select>
+            <button class="btn" onclick="enviarPedido()">Confirmar Pedido</button>
+    </div> -->
+
+
+
+
+
+
+
+
     <script type="module" src="./src/JS/init.js"></script>
     <script src="./src/JS/scroll.js"></script>
+
+    <script>
+        // function abrirModal() {
+        //     document.getElementById('modalPedido').style.display = 'block';
+        // }
+
+        // function fecharModal() {
+        //     document.getElementById('modalPedido').style.display = 'none';
+        // }
+
+        // function enviarPedido() {
+        //     let nome = document.getElementById('nome').value;
+        //     let endereco = document.getElementById('endereco').value;
+        //     let pagamento = document.getElementById('pagamento').value;
+
+        //     if (!nome || !endereco) {
+        //         alert("Por favor, preencha todos os campos!");
+        //         return;
+        //     }
+
+        //     let mensagem = `*Pedido Confirmado!*\n\nNome: ${nome}\nEndereço: ${endereco}\nForma de Pagamento: ${pagamento}`;
+        //     let telefone = "5511999999999"; // Substitua pelo número do estabelecimento
+        //     let url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+        //     window.open(url, '_blank'); // Abre o WhatsApp
+        //     fecharModal();
+        // }
+    </script>
 </body>
 
 </html>
