@@ -18,9 +18,32 @@
         opacity: 0;
         transform: translateX(-125px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes slideInNotify {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutNotify {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -41,10 +64,91 @@
         }
     }
 
+    .btn-filtro {
+        border-radius: calc(infinity * 1px);
+        background-color: #e4e4e4;
+        color: #000000;
+        font-size: 1.2rem;
+        padding: 0.8rem 1.6rem;
+        font-weight: 500;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-adicionar {
+        border-radius: calc(infinity * 1px);
+        background-color: var(--color-one);
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+        margin-top: auto; /* Empurra o botão para a base */
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    .btn-remover {
+        border-radius: calc(infinity * 1px);
+        background-color: red;
+        color: #ffffff;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        margin-top: 10px; /* Empurra o botão para a base */
+        font-weight: bold;
+        cursor: pointer;
+    }
+
     .title-primary {
         font-size: 2.5rem;
         font-weight: bold;
         line-height: 1.1;
         padding-bottom: 20px;
     }
+
+    .title-secondary {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.1;
+        padding-bottom: 20px;
+    }
+
+    .title-prato {
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 1.1;
+        white-space: nowrap;
+        /* Impede que o título quebre em várias linhas */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* Adiciona "..." se o texto for muito longo */
+    }
+
+    .text-primary {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /* Limita o texto a 3 linhas */
+        line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.1;
+        color: #000000;
+    }
+
+    .text-price {
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.1;
+        color: #000000;
+        padding-top: 20px;
+    }
+    .text-price-cart {
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.1;
+        color: #000000;
+        padding: 10px 0;
+    }
+
+
 }

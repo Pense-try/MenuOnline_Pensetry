@@ -47,7 +47,7 @@
                 Nosso menu online facilita a experiência dos seus clientes, permitindo que
                 explorem suas opções com apenas alguns toques. Nada de papel, apenas praticidade.</p>
 
-            <div class="min-w-[90%] flex gap-5 text-3xl pt-[30px] md:pt-[40px] md:gap-5">
+            <div class="min-w-[90%] flex gap-5 text-3xl pt-[30px] md:pt-[40px] md:gap-5 md:justify-center">
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
                 <a href=""><i class="fa-brands fa-whatsapp"></i></a>
                 <a href=""><i class="fa-solid fa-location-dot"></i></a>
@@ -57,22 +57,21 @@
     </section>
 
     <div class="busca-container">
-        <input type="text" id="busca" placeholder="Buscar pratos..." onkeyup="filtrarPratos()">
+        <input type="text" id="busca" placeholder="Buscar pratos... 🔍" onkeyup="filtrarPratos()">
         <div class="filtros-container" id="filtros-container">
-            <button class="btn-filtro active" onclick="filtrarPorCategoria('todos')">Todos</button>
         </div>
     </div>
 
     <div class="display-view-container">
-        <h1>Escolha o modo de visualização</h1>
+        <h2 class="title-secondary">Escolha o modo de visualização</h2>
 
         <div class="view-toggle" onclick="toggleViewMode()">
             <span id="viewModeText">Carrossel</span>
-            <i>🔄</i>
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
         </div>
     </div>
 
-    <section class="menu">
+    <section class="menu menu-carrossel">
         <div id="menu-categorias"></div>
     </section>
 
@@ -81,7 +80,7 @@
 
     <div class="carrinho">
         <span class="fechar-carrinho" onclick="toggleCarrinho()">×</span>
-        <h2>Carrinho</h2>
+        <h2 class="title-secondary">Carrinho</h2>
         <div id="carrinho-itens"></div>
         <!-- Adicione esta div -->
         <div class="carrinho-total">
@@ -93,7 +92,8 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                Restaurante Delícia
+                <img src="./src/IMG/logoPenseTry.png" alt="Logo">
+                <p>Menu Online Pense.Try</p>
             </div>
 
             <div class="footer-social">
@@ -104,7 +104,7 @@
             </div>
 
             <div class="footer-info">
-                <p>Rua Gastronomia, 123 - Centro</p>
+                <p>Rua Seu Futuro Começa Aqui - N° 1 - Bairro Sucesso</p>
                 <p>Telefone: (43) 99614-5479</p>
                 <p>Funcionamento: Terça a Domingo, 11h às 23h</p>
             </div>
