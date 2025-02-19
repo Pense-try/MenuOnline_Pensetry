@@ -107,7 +107,7 @@ export function toggleCarrinho() {
 }
 
 export function fazerPedido() {
-    const numeroWhatsApp = '55996145479';
+    const numeroWhatsApp = '5543996145479';
     let mensagem = 'Olá, gostaria de fazer o seguinte pedido:\n\n';
 
     carrinho.forEach(item => {
