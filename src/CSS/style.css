@@ -5,7 +5,7 @@ body {
 
 .home {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://plus.unsplash.com/premium_photo-1661883237884-263e8de8869b?q=80&w=2089&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/IMG/Img_home_menu.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -167,14 +167,20 @@ body {
     position: fixed;
     top: 20px;
     right: 5%;
-    background: #27ae60;
+    background: var(--color-one);
     color: white;
     padding: 15px 25px;
-    border-radius: 8px;
+    border-radius: calc(infinity * 1px);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     animation: slideInNotify 0.5s ease-out, fadeOutNotify 0.5s ease-in 2s forwards;
     z-index: 1000;
     display: none;
+}
+
+@media (max-width: 769px) {
+    .notificacao {
+        right: 20%;
+    }
 }
 
 /* MENU CONTAINER */
