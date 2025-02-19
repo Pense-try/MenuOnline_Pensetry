@@ -1,14 +1,14 @@
 export const pratos = [
     {
         id: 1,
-        categoria: "Sobremesas",
-        nome: "Cheesecake",
-        imagem: "https://images.unsplash.com/photo-1547414368-ac947d00b91d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        ingredientes: "Base de biscoito, cream cheese, frutas vermelhas",
-        preco: 22.00,
-        tempoPreparo: "10-15 minutos",
+        categoria: "Entradas",
+        nome: "Startup Bruschetta",
+        imagem: "https://images.unsplash.com/photo-1664992892797-781fcf7b7541?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ingredientes: "Pão italiano, tomate confit, manjericão fresco, queijo burrata",
+        preco: 24.90,
+        tempoPreparo: "15-20 minutos",
         servePessoas: "1-2 pessoas",
-        detalhes: "Textura suave e sabor equilibrado com frutas frescas"
+        detalhes: "Versão gourmet com queijo burrata cremoso"
     },
     {
         id: 2,
@@ -23,28 +23,17 @@ export const pratos = [
     },
     {
         id: 3,
-        categoria: "Pratos Principais",
-        nome: "Up Burger",
-        imagem: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
-        ingredientes: "Pão brioche, carne 200g, queijo cheddar",
-        preco: 32.00,
-        tempoPreparo: "15-20 minutos",
-        servePessoas: "1 pessoa",
-        detalhes: "Hambúrguer artesanal com queijo cheddar cremoso"
+        categoria: "Sobremesas",
+        nome: "Cheesecake",
+        imagem: "https://images.unsplash.com/photo-1547414368-ac947d00b91d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ingredientes: "Base de biscoito, cream cheese, frutas vermelhas",
+        preco: 22.00,
+        tempoPreparo: "10-15 minutos",
+        servePessoas: "1-2 pessoas",
+        detalhes: "Textura suave e sabor equilibrado com frutas frescas"
     },
     {
         id: 4,
-        categoria: "Pratos Principais",
-        nome: "Pizza Margherita",
-        imagem: "https://images.unsplash.com/photo-1571066811602-716837d681de",
-        ingredientes: "Molho de tomate, mussarela, manjericão",
-        preco: 45.00,
-        tempoPreparo: "20-25 minutos",
-        servePessoas: "2-3 pessoas",
-        detalhes: "Tradicional receita italiana com ingredientes selecionados"
-    },
-    {
-        id: 5,
         categoria: "Bebidas",
         nome: "Suco Natural Laranja",
         imagem: "https://plus.unsplash.com/premium_photo-1675667390417-d9d23160f4a6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -55,15 +44,26 @@ export const pratos = [
         detalhes: "Refrescante e natural, com um toque de gengibre"
     },
     {
+        id: 5,
+        categoria: "Pratos Principais",
+        nome: "Pizza Margherita",
+        imagem: "https://images.unsplash.com/photo-1571066811602-716837d681de",
+        ingredientes: "Molho de tomate, mussarela, manjericão",
+        preco: 45.00,
+        tempoPreparo: "20-25 minutos",
+        servePessoas: "2-3 pessoas",
+        detalhes: "Tradicional receita italiana com ingredientes selecionados"
+    },
+    {
         id: 6,
-        categoria: "Entradas",
-        nome: "Startup Bruschetta",
-        imagem: "https://images.unsplash.com/photo-1664992892797-781fcf7b7541?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        ingredientes: "Pão italiano, tomate confit, manjericão fresco, queijo burrata",
-        preco: 24.90,
+        categoria: "Pratos Principais",
+        nome: "Up Burger",
+        imagem: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+        ingredientes: "Pão brioche, carne 200g, queijo cheddar",
+        preco: 32.00,
         tempoPreparo: "15-20 minutos",
-        servePessoas: "1-2 pessoas",
-        detalhes: "Versão gourmet com queijo burrata cremoso"
+        servePessoas: "1 pessoa",
+        detalhes: "Hambúrguer artesanal com queijo cheddar cremoso"
     },
     {
         id: 7,
