@@ -36,7 +36,7 @@ function adicionarPratoDOM(prato, container) {
     const div = document.createElement('div');
     div.className = 'prato';
     div.innerHTML = `
-        <img src="${prato.imagem}" alt="${prato.nome}">
+        <img src="${prato.imagem}" alt="${prato.nome}" loading="lazy"">
         <div class="prato-info">
             <h3 class="title-prato">${prato.nome}</h3>
             <p class="text-primary">
