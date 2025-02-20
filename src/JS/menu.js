@@ -48,10 +48,10 @@ function adicionarPratoDOM(prato, container) {
         </div>
     `;
 
-     // Adiciona o evento de clique corretamente
-     div.querySelector('.saiba-mais').addEventListener('click', (e) => {
+      // Evento para o "saiba mais"
+      div.querySelector('.saiba-mais').addEventListener('click', (e) => {
         e.preventDefault();
-        abrirModal(prato); // Passa o objeto completo do prato
+        abrirModal(prato);
     });
 
     container.appendChild(div);

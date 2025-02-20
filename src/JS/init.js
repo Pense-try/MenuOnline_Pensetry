@@ -2,7 +2,7 @@
 import { pratos } from './data.js';
 import { initMenu } from './menu.js';
 import { criarBotoesFiltro, filtrarPratos } from './filters.js';
-import { initModal } from './modal.js';
+import { abrirModal } from './modal.js';
 import { initViewMode, toggleViewMode } from './view.js';
 import {
     adicionarAoCarrinho,
@@ -14,14 +14,12 @@ import {
 } from './cart.js';
 import { mostrarNotificacao } from './utils.js';
 
-
 // Configura eventos globais
 window.adicionarAoCarrinho = (nomePrato) => {
     adicionarAoCarrinho(nomePrato, pratos);
     atualizarCarrinhoDOM();
     mostrarNotificacao();
 };
-
 window.removerDoCarrinho = removerDoCarrinho;
 window.atualizarQuantidade = atualizarQuantidade;
 window.toggleCarrinho = toggleCarrinho;
@@ -34,4 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initMenu();
     initViewMode();
     criarBotoesFiltro();
+    abrirModal();
 });
+

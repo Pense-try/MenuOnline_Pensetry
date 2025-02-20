@@ -120,3 +120,70 @@ export function fazerPedido() {
     window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`, '_blank');
 }
 
+// export function fazerPedido() {
+//     // Abre o modal de finalização ao invés de enviar direto
+//     const modal = document.getElementById('modal-finalizar');
+//     modal.style.display = 'block';
+// }
+
+// // Nova função para enviar o pedido completo
+// export function enviarPedidoCompleto() {
+//     const nome = document.getElementById('nome').value;
+//     const endereco = document.getElementById('endereco').value;
+//     const pagamento = document.getElementById('pagamento').value;
+//     const troco = document.getElementById('troco').value;
+//     const observacoes = document.getElementById('observacoes').value;
+    
+//     if (!validarDados(nome, endereco, pagamento)) return;
+
+//     const numeroWhatsApp = '5543996145479';
+//     const mensagem = formatarMensagem(nome, endereco, pagamento, troco, observacoes);
+    
+//     window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`, '_blank');
+//     fecharModalFinalizacao();
+// }
+
+// function validarDados(nome, endereco, pagamento) {
+//     if (!nome || !endereco || !pagamento) {
+//         alert('Por favor, preencha todos os campos obrigatórios!');
+//         return false;
+//     }
+//     if (pagamento === 'Dinheiro' && !troco) {
+//         alert('Por favor, informe o valor para troco!');
+//         return false;
+//     }
+//     return true;
+// }
+
+// function formatarMensagem(nome, endereco, pagamento, troco, observacoes) {
+//     let mensagem = `*Pedido realizado via site*\n\n`;
+//     mensagem += `*Cliente:* ${nome}\n`;
+//     mensagem += `*Endereço:* ${endereco}\n\n`;
+//     mensagem += `*Itens do pedido:*\n${carrinho.map(item => 
+//         `${item.quantidade}x ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}`
+//     ).join('\n')}\n\n`;
+//     mensagem += `*Total:* R$ ${calcularTotal().toFixed(2)}\n`;
+//     mensagem += `*Forma de pagamento:* ${pagamento}\n`;
+//     if (troco) mensagem += `*Troco para:* R$ ${parseFloat(troco).toFixed(2)}\n`;
+//     if (observacoes) mensagem += `\n*Observações:*\n${observacoes}`;
+    
+//     return mensagem;
+// }
+
+// function fecharModalFinalizacao() {
+//     document.getElementById('modal-finalizar').style.display = 'none';
+//     document.getElementById('form-finalizar').reset();
+// }
+
+// // Mostrar campo de troco quando selecionar dinheiro
+// document.getElementById('pagamento').addEventListener('change', (e) => {
+//     const trocoContainer = document.getElementById('troco-container');
+//     trocoContainer.style.display = e.target.value === 'Dinheiro' ? 'block' : 'none';
+//     if (e.target.value !== 'Dinheiro') document.getElementById('troco').value = '';
+// });
+
+// // Submissão do formulário
+// document.getElementById('form-finalizar').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     enviarPedidoCompleto();
+// });

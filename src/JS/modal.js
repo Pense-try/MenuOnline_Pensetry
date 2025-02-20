@@ -1,52 +1,50 @@
-export function initModal() {
-    const modal = document.createElement('div');
-    modal.id = 'modal-prato';
-    modal.innerHTML = `
-        <div class="modal-conteudo">
-            <span class="fechar-modal">&times;</span>
-            <img class="modal-imagem" src="" alt="">
-            <div class="modal-info">
-                <h2 class="modal-titulo"></h2>
-                <p class="modal-ingredientes"></p>
-                <div class="modal-detalhes">
-                    <p><strong>Tempo de preparo:</strong> <span class="modal-tempo"></span></p>
-                    <p><strong>Serve:</strong> <span class="modal-serve"></span></p>
-                </div>
-                <p class="modal-descricao"></p>
-                <p class="modal-preco"></p>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(modal);
-    
-    // Event listeners
-    document.querySelectorAll('.btn-saiba-mais').forEach(btn => {
-        btn.addEventListener('click', abrirModal);
-    });
-    
-    document.querySelector('.fechar-modal').addEventListener('click', fecharModal);
-    modal.addEventListener('click', (e) => {
-        if(e.target === modal) fecharModal();
-    });
-}
-
-export function abrirModal(prato) { // Recebe o objeto prato diretamente
+// modal.js
+export function abrirModal(prato) {
     const modal = document.getElementById('modal-prato');
     
-    // Preenche os dados do modal
-    modal.querySelector('.modal-imagem').src = prato.imagem;
-    modal.querySelector('.modal-titulo').textContent = prato.nome;
-    modal.querySelector('.modal-ingredientes').textContent = prato.ingredientes;
-    modal.querySelector('.modal-tempo').textContent = prato.tempoPreparo;
-    modal.querySelector('.modal-serve').textContent = prato.servePessoas;
-    modal.querySelector('.modal-descricao').textContent = prato.detalhes;
-    modal.querySelector('.modal-preco').textContent = `R$ ${prato.preco.toFixed(2)}`;
-    
-    modal.style.display = 'block';
+    // Verificação de segurança
+    if (!modal) {
+        console.error('Modal não encontrado! Verifique o HTML');
+        return;
+    }
+
+    // Elementos do modal
+    const elementos = {
+        imagem: modal.querySelector('.modal-imagem'),
+        titulo: modal.querySelector('.modal-titulo'),
+        ingredientes: modal.querySelector('.modal-ingredientes'),
+        tempo: modal.querySelector('.modal-tempo'),
+        serve: modal.querySelector('.modal-serve'),
+        descricao: modal.querySelector('.modal-descricao'),
+        preco: modal.querySelector('.modal-preco')
+    };
+
+    // Preenche os dados
+    elementos.imagem.src = prato.imagem;
+    elementos.titulo.textContent = prato.nome;
+    elementos.ingredientes.textContent = prato.ingredientes;
+    elementos.tempo.textContent = prato.tempoPreparo;
+    elementos.serve.textContent = prato.servePessoas;
+    elementos.descricao.textContent = prato.detalhes;
+    elementos.preco.textContent = `R$ ${prato.preco.toFixed(2)}`;
+
+    // Exibe o modal
+    modal.style.display = 'flex';
 }
 
-function fecharModal() {
-    document.getElementById('modal-prato').style.display = 'none';
+// Função para fechar o modal
+export function fecharModal() {
+    const modal = document.getElementById('modal-prato');
+    if (modal) modal.style.display = 'none';
 }
+
+// Configura o clique fora do modal
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('modal-prato');
+    if (e.target === modal) fecharModal();
+});
+
+// Configura o botão de fechar
+document.querySelector('.fechar-modal-prato')?.addEventListener('click', fecharModal);
 
 export const modal = { abrirModal, fecharModal };

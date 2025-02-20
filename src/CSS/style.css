@@ -199,6 +199,60 @@ body {
 
 
 
+
+
+/* Estilos do modal de finalização
+#modal-finalizar .modal-conteudo {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-confirmar {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.btn-confirmar:hover {
+    background: #219a52;
+}
+
+#troco-container {
+    transition: all 0.3s ease;
+} */
+
+
+
+
+
+
+
+
 /* .modal-carrinho {
     display: none;
     position: fixed;
@@ -348,9 +402,10 @@ body {
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     overflow-y: auto;
+    justify-content: center;
 }
 
-.modal {
+.modal-pratos {
     display: none;
     position: fixed;
     top: 0;
@@ -383,6 +438,17 @@ body {
     gap: 1rem;
 }
 
+.modal-info h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.modal-preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+    
+
 .modal-detalhes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -392,17 +458,22 @@ body {
     border-radius: 8px;
 }
 
-.fechar-modal {
+.fechar-modal-prato {
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1px;
+    right: 1px;
     font-size: 2rem;
     cursor: pointer;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .saiba-mais {
-    color: #838383;
+    color: #696969;
     cursor: pointer;
     font-size: 1rem;
     font-style: italic;
@@ -412,6 +483,13 @@ body {
 .saiba-mais:hover {
     color: var(--color-one);
     text-decoration: underline;
+}
+
+@media screen and (max-width: 769px) {
+    .modal-conteudo {
+        margin: auto 0.5rem;
+    }
+    
 }
 
 /* BUSCA CONTAINER */

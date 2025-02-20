@@ -122,20 +122,87 @@
 
 
 
-<!-- 
-    <div id="modalPedido" class="modal-carrinho">
-        <div class="modal-content-carrinho">
-            <span class="close" onclick="fecharModal()">&times;</span>
-            <h2>Finalize seu Pedido</h2>
-            <input type="text" id="nome" placeholder="Seu Nome">
-            <input type="text" id="endereco" placeholder="Endereço de Entrega">
-            <select id="pagamento">
-                <option value="dinheiro">Dinheiro</option>
-                <option value="cartao">Cartão</option>
-                <option value="pix">Pix</option>
-            </select>
-            <button class="btn" onclick="enviarPedido()">Confirmar Pedido</button>
-    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- No final do body, antes dos scripts -->
+<div id="modal-prato" class="modal-pratos">
+    <div class="modal-conteudo">
+        <span class="fechar-modal-prato">&times;</span>
+        <img class="modal-imagem" src="" alt="">
+        <div class="modal-info">
+            <h2 class="modal-titulo"></h2>
+            <p class="modal-ingredientes"></p>
+            <div class="modal-detalhes">
+                <p><strong>Tempo de preparo:</strong> <span class="modal-tempo"></span></p>
+                <p><strong>Serve:</strong> <span class="modal-serve"></span></p>
+            </div>
+            <p class="modal-descricao"></p>
+            <p class="modal-preco"></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div id="modal-finalizar" class="modal-carrinho">
+    <div class="modal-conteudo">
+        <span class="fechar-modal">&times;</span>
+        <h2>Finalizar Pedido</h2>
+        
+        <form id="form-finalizar">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="endereco">Endereço para entrega:</label>
+                <textarea id="endereco" rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Forma de Pagamento:</label>
+                <select id="pagamento" required>
+                    <option value="">Selecione...</option>
+                    <option value="Cartão (Máquina)">Cartão (Máquina)</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="PIX">PIX</option>
+                </select>
+            </div>
+            
+            <div class="form-group" id="troco-container" style="display: none;">
+                <label for="troco">Troco para:</label>
+                <input type="number" id="troco" step="0.01">
+            </div>
+            
+            <div class="form-group">
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" rows="2"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-confirmar">Confirmar Pedido</button>
+        </form>
+    </div>
+</div> -->
+
 
 
 
