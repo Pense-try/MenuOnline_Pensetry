@@ -186,18 +186,6 @@ body {
 
 /* MODAL CARRINHO */
 
-
-
-
-
-
-
-
-
-
-
-
-
 .modal-carrinho {
     position: fixed;
     top: 0;
@@ -215,7 +203,7 @@ body {
     background: white;
     max-width: 600px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
     border-radius: 10px;
     top: 50%;
     transform: translateY(-50%);
@@ -312,7 +300,7 @@ Estilos do modal de finalização
 @media (max-width: 769px) {
     #modal-finalizar .modal-conteudo-finalizar {
         max-width: 100%;
-        margin: 5% 2%;
+        margin: 5%;
     }
 
     .fechar-modal-carrinho {
@@ -323,18 +311,6 @@ Estilos do modal de finalização
         right: 5px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* MENU CONTAINER */
 
@@ -506,7 +482,7 @@ Estilos do modal de finalização
 
 @media screen and (max-width: 769px) {
     .modal-conteudo {
-        margin: auto 0.5rem;
+        margin: auto 1rem;
     }
     
 }
