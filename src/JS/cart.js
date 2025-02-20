@@ -1,5 +1,11 @@
 export let carrinho = [];
 
+export function calcularTotal() {
+    return carrinho.reduce((total, item) => {
+        return total + (item.preco * item.quantidade);
+    }, 0);
+}
+
 export function adicionarAoCarrinho(nomePrato, pratos) {
     const prato = pratos.find(p => p.nome === nomePrato);
     const itemExistente = carrinho.find(item => item.nome === nomePrato);
@@ -100,90 +106,111 @@ export function atualizarCarrinhoDOM() {
     } else {
         console.error('Elemento do total não encontrado!');
     }
+
+    const totalCarrinhoElement = document.getElementById('total-finalizar');
+    if (totalCarrinhoElement) {
+        totalCarrinhoElement.textContent = `R$ ${total.toFixed(2)}`;
+    } else {
+        console.error('Elemento do carrinho não encontrado!');
+    }
+
+     // Atualiza o total usando a nova função
+     document.getElementById('carrinho-total').textContent = 
+     `R$ ${calcularTotal().toFixed(2)}`;
 }
 
 export function toggleCarrinho() {
     document.querySelector('.carrinho').classList.toggle('ativo');
 }
 
+// export function fazerPedido() {
+//     const numeroWhatsApp = '5543996145479';
+//     let mensagem = 'Olá, gostaria de fazer o seguinte pedido:\n\n';
+
+//     carrinho.forEach(item => {
+//         mensagem += `${item.quantidade}x ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}\n`;
+//     });
+
+//     const total = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
+//     mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
+
+//     window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`, '_blank');
+// }
+
+
+// Função principal modificada
 export function fazerPedido() {
-    const numeroWhatsApp = '5543996145479';
-    let mensagem = 'Olá, gostaria de fazer o seguinte pedido:\n\n';
-
-    carrinho.forEach(item => {
-        mensagem += `${item.quantidade}x ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}\n`;
-    });
-
-    const total = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
-    mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
-
-    window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`, '_blank');
+    const modal = document.getElementById('modal-finalizar');
+    if (modal) modal.style.display = 'block';
 }
 
-// export function fazerPedido() {
-//     // Abre o modal de finalização ao invés de enviar direto
-//     const modal = document.getElementById('modal-finalizar');
-//     modal.style.display = 'block';
-// }
 
-// // Nova função para enviar o pedido completo
-// export function enviarPedidoCompleto() {
-//     const nome = document.getElementById('nome').value;
-//     const endereco = document.getElementById('endereco').value;
-//     const pagamento = document.getElementById('pagamento').value;
-//     const troco = document.getElementById('troco').value;
-//     const observacoes = document.getElementById('observacoes').value;
+// Nova função para enviar o pedido completo
+export function enviarPedidoCompleto() {
+    const nome = document.getElementById('nome').value;
+    const endereco = document.getElementById('endereco').value;
+    const pagamento = document.getElementById('pagamento').value;
+    const troco = document.getElementById('troco').value;
+    const observacoes = document.getElementById('observacoes').value;
     
-//     if (!validarDados(nome, endereco, pagamento)) return;
+    if (!validarDados(nome, endereco, pagamento)) return;
 
-//     const numeroWhatsApp = '5543996145479';
-//     const mensagem = formatarMensagem(nome, endereco, pagamento, troco, observacoes);
+    const numeroWhatsApp = '5543996145479';
+    const mensagem = formatarMensagem(nome, endereco, pagamento, troco, observacoes);
     
-//     window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`, '_blank');
-//     fecharModalFinalizacao();
-// }
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`, '_blank');
+    fecharModalFinalizacao();
+}
 
-// function validarDados(nome, endereco, pagamento) {
-//     if (!nome || !endereco || !pagamento) {
-//         alert('Por favor, preencha todos os campos obrigatórios!');
-//         return false;
-//     }
-//     if (pagamento === 'Dinheiro' && !troco) {
-//         alert('Por favor, informe o valor para troco!');
-//         return false;
-//     }
-//     return true;
-// }
+function validarDados(nome, endereco, pagamento) {
+    if (!nome || !endereco || !pagamento) {
+        alert('Por favor, preencha todos os campos obrigatórios!');
+        return false;
+    }
+    if (pagamento === 'Dinheiro' && !troco) {
+        alert('Por favor, informe o valor para troco!');
+        return false;
+    }
+    return true;
+}
 
-// function formatarMensagem(nome, endereco, pagamento, troco, observacoes) {
-//     let mensagem = `*Pedido realizado via site*\n\n`;
-//     mensagem += `*Cliente:* ${nome}\n`;
-//     mensagem += `*Endereço:* ${endereco}\n\n`;
-//     mensagem += `*Itens do pedido:*\n${carrinho.map(item => 
-//         `${item.quantidade}x ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}`
-//     ).join('\n')}\n\n`;
-//     mensagem += `*Total:* R$ ${calcularTotal().toFixed(2)}\n`;
-//     mensagem += `*Forma de pagamento:* ${pagamento}\n`;
-//     if (troco) mensagem += `*Troco para:* R$ ${parseFloat(troco).toFixed(2)}\n`;
-//     if (observacoes) mensagem += `\n*Observações:*\n${observacoes}`;
+// Atualize a função formatarMensagem
+function formatarMensagem(nome, endereco, pagamento, troco, observacoes) {
+    let mensagem = `*Pedido realizado via site*\n\n`;
+    mensagem += `*Cliente:* ${nome}\n`;
+    mensagem += `*Endereço:* ${endereco}\n\n`;
+    mensagem += `*Itens do pedido:*\n${carrinho.map(item => 
+        `${item.quantidade}x ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}`
+    ).join('\n')}\n\n`;
+    mensagem += `*Total:* R$ ${calcularTotal().toFixed(2)}\n`; // Chamada corrigida
+    mensagem += `*Forma de pagamento:* ${pagamento}\n`;
+    if (troco) mensagem += `*Troco para:* R$ ${parseFloat(troco).toFixed(2)}\n`;
+    if (observacoes) mensagem += `\n*Observações:*\n${observacoes}`;
     
-//     return mensagem;
-// }
+    return mensagem;
+}
 
-// function fecharModalFinalizacao() {
-//     document.getElementById('modal-finalizar').style.display = 'none';
-//     document.getElementById('form-finalizar').reset();
-// }
+function fecharModalFinalizacao() {
+    document.getElementById('modal-finalizar').style.display = 'none';
+    document.getElementById('form-finalizar').reset();
+}
 
-// // Mostrar campo de troco quando selecionar dinheiro
-// document.getElementById('pagamento').addEventListener('change', (e) => {
-//     const trocoContainer = document.getElementById('troco-container');
-//     trocoContainer.style.display = e.target.value === 'Dinheiro' ? 'block' : 'none';
-//     if (e.target.value !== 'Dinheiro') document.getElementById('troco').value = '';
-// });
+// Mostrar campo de troco quando selecionar dinheiro
+document.getElementById('pagamento').addEventListener('change', (e) => {
+    const trocoContainer = document.getElementById('troco-container');
+    trocoContainer.style.display = e.target.value === 'Dinheiro' ? 'block' : 'none';
+    if (e.target.value !== 'Dinheiro') document.getElementById('troco').value = '';
+});
 
-// // Submissão do formulário
-// document.getElementById('form-finalizar').addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     enviarPedidoCompleto();
-// });
+// Submissão do formulário
+document.getElementById('form-finalizar').addEventListener('submit', (e) => {
+    e.preventDefault();
+    enviarPedidoCompleto();
+});
+
+export function fecharModalCarrinho() {
+    const modalCarrinho = document.querySelector(".fechar-modal-carrinho")
+
+    modalCarrinho.addEventListener("click", () => document.getElementById('modal-finalizar').style.display = 'none');
+}
+

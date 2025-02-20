@@ -162,10 +162,10 @@
 
 
 
-<!-- <div id="modal-finalizar" class="modal-carrinho">
-    <div class="modal-conteudo">
-        <span class="fechar-modal">&times;</span>
-        <h2>Finalizar Pedido</h2>
+<div id="modal-finalizar" class="modal-carrinho">
+    <div class="modal-conteudo-finalizar">
+        <span class="fechar-modal-carrinho" onclick="fecharModalCarrinho()">&times;</span>
+        <h2 class="title-secondary">Finalizar Pedido</h2>
         
         <form id="form-finalizar">
             <div class="form-group">
@@ -198,10 +198,14 @@
                 <textarea id="observacoes" rows="2"></textarea>
             </div>
             
+            <div class="total-finalizar">
+                <p>Total: <span id="total-finalizar">R$ 0,00</span></p>
+            </div>
+
             <button type="submit" class="btn-confirmar">Confirmar Pedido</button>
         </form>
     </div>
-</div> -->
+</div>
 
 
 
@@ -214,33 +218,6 @@
     <script type="module" src="./src/JS/init.js"></script>
     <script src="./src/JS/scroll.js"></script>
 
-    <script>
-        // function abrirModal() {
-        //     document.getElementById('modalPedido').style.display = 'block';
-        // }
-
-        // function fecharModal() {
-        //     document.getElementById('modalPedido').style.display = 'none';
-        // }
-
-        // function enviarPedido() {
-        //     let nome = document.getElementById('nome').value;
-        //     let endereco = document.getElementById('endereco').value;
-        //     let pagamento = document.getElementById('pagamento').value;
-
-        //     if (!nome || !endereco) {
-        //         alert("Por favor, preencha todos os campos!");
-        //         return;
-        //     }
-
-        //     let mensagem = `*Pedido Confirmado!*\n\nNome: ${nome}\nEndereço: ${endereco}\nForma de Pagamento: ${pagamento}`;
-        //     let telefone = "5511999999999"; // Substitua pelo número do estabelecimento
-        //     let url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-
-        //     window.open(url, '_blank'); // Abre o WhatsApp
-        //     fecharModal();
-        // }
-    </script>
 </body>
 
 </html>

@@ -10,7 +10,8 @@ import {
     atualizarQuantidade,
     atualizarCarrinhoDOM,
     fazerPedido,
-    toggleCarrinho
+    toggleCarrinho,
+    fecharModalCarrinho
 } from './cart.js';
 import { mostrarNotificacao } from './utils.js';
 
@@ -24,6 +25,7 @@ window.removerDoCarrinho = removerDoCarrinho;
 window.atualizarQuantidade = atualizarQuantidade;
 window.toggleCarrinho = toggleCarrinho;
 window.fazerPedido = fazerPedido;
+window.fecharModalCarrinho = fecharModalCarrinho;
 window.filtrarPratos = filtrarPratos;
 window.toggleViewMode = toggleViewMode;
 
